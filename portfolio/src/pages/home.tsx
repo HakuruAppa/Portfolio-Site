@@ -9,7 +9,7 @@ const Home = () => {
    // Main container - full screen
    <div className="h-screen w-full">
      {/* Content wrapper - centers content and handles responsive layout */}
-     <div className="max-w-5xl mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
+     <div className="max-w-5xl mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row my-">
        {/* Left side - Text content */}
        <div className="flex flex-col justify-center h-full">
          {/* Main headline */}

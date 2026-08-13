@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 import './NavBar.css';
 
 import {
-    FaEnvelope,
-    FaPhone,
+    //FaEnvelope,
+    //FaPhone,
     FaSun,
     FaMoon,
 } from 'react-icons/fa';
@@ -20,7 +20,27 @@ const Footer = () => {
     const handleThemeToggle = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
         setTheme(newTheme);
-        document.documentElement.classList.toggle('dark', newTheme === 'dark');
+        //document.documentElement.classList.toggle('dark', newTheme === 'dark');
+
+        if (localStorage.getItem('color-theme')) {
+            if (localStorage.getItem('color-theme') === 'light') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            }
+
+        // if NOT set via local storage previously
+        } else {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        }
     };
 
     return (
@@ -33,11 +53,11 @@ const Footer = () => {
                 </div>
 
 
-                {/* Desktop Menu - hidden on mobile, flex on medium screens and up */}
                 <div className='md:flex gap-x-4 text-sm justify-between text-center'>
                       
                         <a href='tel:+16474604939' style={{ fontWeight: 'bold' }}>+1 (647) 460-4939</a>
-                        <p> | </p>
+                        <p className='hidden md:flex'> | </p>
+                        <br className='flex md:hidden'></br>
                         <a href='mailto:anukahangamgoda@gmail.com' style={{ fontWeight: 'bold' }}>anukahangamgoda@gmail.com</a>
                     
                 </div>

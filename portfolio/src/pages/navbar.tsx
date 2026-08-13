@@ -9,8 +9,7 @@ import {
   FaLinkedin,
   FaBehance,
   FaYoutube,
-  FaSun,
-  FaMoon,
+
 } from 'react-icons/fa';
 //import { HiOutlineMail } from 'react-icons/hi';
 //import { BsFillPersonLinesFill } from 'react-icons/bs';
@@ -22,13 +21,6 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
-  // State to handle theme toggle (light/dark)
-  const [theme, setTheme] = useState('light');
-  const handleThemeToggle = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    };
 
   return (
     // Main navbar container - fixed at top, full width
@@ -86,7 +78,9 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu - full screen overlay */}
-      <ul id="mobile-menu" className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center'}>
+      <ul id="mobile-menu"  className={`absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center transform delay-100 transition-all duration-150 ${
+        nav ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"}`}>
+
         <li className='py-6 text-4xl'>
           <NavLink onClick={handleClick} to='home'>
             Home
