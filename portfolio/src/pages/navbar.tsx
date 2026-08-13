@@ -37,6 +37,8 @@ const Navbar = () => {
       <div>
         <h1 className='font-thin text-2xl italic font-serif'>Anuk A.</h1>
       </div>
+
+      <div className='flex justify-between items-center gap-x-12'>
       <div className='flex justify-self-end gap-x-4'>
         <a href="https://www.linkedin.com/in/anukahangamgoda/" className='flex px-0'>
          <FaLinkedin size={20} />
@@ -106,11 +108,8 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-
-      {/* Theme Toggle */}
-      <div onClick={handleThemeToggle} className='z-10 cursor-pointer'>
-        {theme === 'light' ? <FaMoon size={20} /> : <FaSun size={20} />}
       </div>
+
 
       
     </div>

@@ -5,13 +5,16 @@ import Contact from './pages/contact.tsx'
 import Navbar from './pages/navbar.tsx'
 import Dev from './pages/dev.tsx'
 import Art from './pages/art.tsx'
+import Footer from './pages/footer.tsx'
 
 
 function App() {
   return (
     <BrowserRouter>
       <div >
+        <Footer />
         <Navbar />
+       
       </div>
       <Routes>
         <Route path="/" element={<Home />} />

@@ -18,10 +18,15 @@ const Home = () => {
          </h2>
          {/* Brief introduction */}
          <p className=" py-4 max-w-lg">
-           I'm a developer and artist based in Canada. 
-           <br></br>With software, I specialize in fullstack development with a focus on machine-learning and AI research. See more at <NavLink to="/dev" >dev</NavLink> for my work and research projects.
-           <br></br>With art, I have extensive experience as a creative director and mixed-media artist. See more at <NavLink to="/art" >art</NavLink> for my projects.  
-           <br></br>Feel free to reach out to me for anything, whether it's a project or to chat. You can find my contact information at <NavLink to="/contact" >contact</NavLink>.
+           I'm a software developer and artist based in Canada.
+           <br></br>
+           <br></br>When it comes to software, I specialize in fullstack development with a focus on machine-learning and AI research. 
+           <br></br>See more at <NavLink to="/dev" >dev</NavLink> for my work and research projects.
+           <br></br>
+           <br></br>With art, I have extensive experience as a creative director and mixed-media artist. 
+           <br></br>See more at <NavLink to="/art" >art</NavLink> for my creative projects.  
+           <br></br>
+           <br></br>Feel free to reach out to me for anything, whether it's a project to collaborate on, a mutual opportunity or just to chat! You can find my contact information <NavLink to="/contact" >here</NavLink> or down below.
          </p>
 
        </div>
