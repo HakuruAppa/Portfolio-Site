@@ -8,6 +8,10 @@ import {
     FaSun,
     FaMoon,
 } from 'react-icons/fa';
+
+import {
+    RiArrowRightUpLine,
+} from 'react-icons/ri';
 //import { HiOutlineMail } from 'react-icons/hi';
 //import { BsFillPersonLinesFill } from 'react-icons/bs';
 
@@ -48,18 +52,21 @@ const Footer = () => {
         
             <div className='NavBar fixed bottom-0 w-full h-20 flex justify-between items-center px-4 '>
 
-                <div>
+                <div className=" hidden md:flex">
                     <p className='text-sm'>Anuk Ahangamgoda, 2026</p>
                 </div>
 
 
-                <div className='md:flex gap-x-4 text-sm justify-between text-center'>
-                      
-                        <a href='tel:+16474604939' style={{ fontWeight: 'bold' }}>+1 (647) 460-4939</a>
+                <div className='md:flex text-sm md:text-center'>
+                        
+                        <a href='tel:+16474604939'  className='flex' style={{ fontWeight: 'bold' }}> <RiArrowRightUpLine size={12} /> +1 (647) 460-4939</a>
+                        
+                        <div className='flex md:mx-8'>
                         <p className='hidden md:flex'> | </p>
-                        <br className='flex md:hidden'></br>
-                        <a href='mailto:anukahangamgoda@gmail.com' style={{ fontWeight: 'bold' }}>anukahangamgoda@gmail.com</a>
-                    
+                        </div>
+
+                        <a href='mailto:anukahangamgoda@gmail.com'  className='flex' style={{ fontWeight: 'bold' }}> <RiArrowRightUpLine size={12} />anukahangamgoda@gmail.com</a>
+                       
                 </div>
 
            

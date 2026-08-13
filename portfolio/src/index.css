@@ -52,17 +52,19 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  transition: background-color 1s ease;
 
-  transition: --bg 0.3s ease, --accent 0.3s ease, --text 0.3s ease;
+
 
   @media (max-width: 1024px) {
     font-size: 16px;
   }
 }
 
-
 body {
   margin: 0;
+  transition: background-color 3s ease, color 3s ease;
 }
 
 h1,
@@ -71,6 +73,7 @@ h2 {
   font-style: bold;
   font-weight: 500;
   color: var(--text-h);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
@@ -104,5 +107,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-  transition: color 0.3s ease;
 }

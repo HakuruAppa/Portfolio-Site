@@ -11,12 +11,10 @@ import Footer from './pages/footer.tsx'
 function App() {
   return (
     <BrowserRouter>
-      <div >
-        <Footer />
-        
-        <Navbar />
-       
-      </div>
+      <Footer />
+      <Navbar />
+      
+      <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
@@ -24,6 +22,7 @@ function App() {
         <Route path="/art" element={<Art />} />
         <Route path="*" element={<Home />} />
       </Routes>
+</div>
     </BrowserRouter>
   );
 }
