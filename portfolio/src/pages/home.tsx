@@ -1,7 +1,7 @@
 //import React from 'react';
-import { HiArrowNarrowRight } from 'react-icons/hi'; // Arrow icon for button
+//import { HiArrowNarrowRight } from 'react-icons/hi'; // Arrow icon for button
 //import me from '../assets/me.png'; // Your profile photo
-import { Link } from "react-scroll"; // For smooth scrolling
+//import { Link } from "react-scroll"; // For smooth scrolling
 import { NavLink } from "react-router-dom"; // For navigation links
 
 const Home = () => {

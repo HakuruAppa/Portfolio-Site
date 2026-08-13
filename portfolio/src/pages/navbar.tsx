@@ -15,7 +15,7 @@ import {
 //import { HiOutlineMail } from 'react-icons/hi';
 //import { BsFillPersonLinesFill } from 'react-icons/bs';
 
-import { Link } from 'react-scroll';
+//import { Link } from 'react-scroll';
 
 const Navbar = () => {
   // State to handle mobile menu toggle (open/closed)
@@ -57,22 +57,22 @@ const Navbar = () => {
       {/* Desktop Menu - hidden on mobile, flex on medium screens and up */}
       <ul className='hidden md:flex gap-x-8'>
         <li>
-          <NavLink to='home'>
+          <NavLink style={({ isActive }) => (isActive ? { color: 'var(--accent)' } : {})} to='home'>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to='dev'>
+          <NavLink style={({ isActive }) => (isActive ? { color: 'var(--accent)' } : {})} to='dev'>
             Dev
           </NavLink>
         </li>
         <li>
-          <NavLink to='art'>
+          <NavLink style={({ isActive }) => (isActive ? { color: 'var(--accent)' } : {})} to='art'>
             Art
           </NavLink>
         </li>
         <li>
-          <NavLink to='contact'>
+          <NavLink style={({ isActive }) => (isActive ? { color: 'var(--accent)' } : {})} to='contact'>
             Contact
           </NavLink>
         </li>
@@ -84,7 +84,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu - full screen overlay */}
-      <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center'}>
+      <ul id="mobile-menu" className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center'}>
         <li className='py-6 text-4xl'>
           <NavLink onClick={handleClick} to='home'>
             Home

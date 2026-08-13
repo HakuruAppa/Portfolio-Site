@@ -9,4 +9,8 @@
     color: var(--accent);
     transition: color 0.3s ease;
     }
+
+    #mobile-menu {
+        background: var(--bg);
+    }
 }
