@@ -7,7 +7,6 @@ import Dev from './pages/dev.tsx'
 import Art from './pages/art.tsx'
 
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/dev" element={<Dev />} />
         <Route path="/art" element={<Art />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

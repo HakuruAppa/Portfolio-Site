@@ -2,6 +2,7 @@
 import { HiArrowNarrowRight } from 'react-icons/hi'; // Arrow icon for button
 //import me from '../assets/me.png'; // Your profile photo
 import { Link } from "react-scroll"; // For smooth scrolling
+import { NavLink } from "react-router-dom"; // For navigation links
 
 const Home = () => {
  return (
@@ -16,10 +17,11 @@ const Home = () => {
            Hi, I'm Anuk.
          </h2>
          {/* Brief introduction */}
-         <p className=" py-4 max-w-md">
-           I have 4 years of experience in graphics design and web development.
-           Currently, I love to work on web application using technologies like
-           React, Tailwind, Next.js and Mongodb.
+         <p className=" py-4 max-w-lg">
+           I'm a developer and artist based in Canada. 
+           <br></br>With software, I specialize in fullstack development with a focus on machine-learning and AI research. See more at <NavLink to="/dev" >dev</NavLink> for my work and research projects.
+           <br></br>With art, I have extensive experience as a creative director and mixed-media artist. See more at <NavLink to="/art" >art</NavLink> for my projects.  
+           <br></br>Feel free to reach out to me for anything, whether it's a project or to chat. You can find my contact information at <NavLink to="/contact" >contact</NavLink>.
          </p>
 
        </div>

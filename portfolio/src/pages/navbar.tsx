@@ -1,4 +1,6 @@
 import { useState } from "react";
+import {NavLink} from "react-router-dom";
+import './NavBar.css';
 
 import {
   FaBars,
@@ -6,6 +8,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaBehance,
+  FaYoutube,
   FaSun,
   FaMoon,
 } from 'react-icons/fa';
@@ -22,54 +25,56 @@ const Navbar = () => {
   // State to handle theme toggle (light/dark)
   const [theme, setTheme] = useState('light');
   const handleThemeToggle = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
     };
 
   return (
     // Main navbar container - fixed at top, full width
-    <div className='fixed w-full h-20 flex justify-between items-center px-4 '>
+    <div className='NavBar fixed w-full h-20 flex justify-between items-center px-4 '>
 
       <div>
         <h1 className='font-thin text-2xl italic font-serif'>Anuk A.</h1>
       </div>
-      <div>
-        <a href="https://linkedin.com/" className='flex  px-0'>
+      <div className='flex justify-self-end gap-x-4'>
+        <a href="https://www.linkedin.com/in/anukahangamgoda/" className='flex px-0'>
          <FaLinkedin size={20} />
         </a>
-      </div>
-      <div>
-        <a href="https://github.com" className='flex justify-between items-center w-full  px-0'>
+   
+        <a href="https://github.com/HakuruAppa" className='flex justify-between items-center w-full  px-0'>
            <FaGithub size={20} />
         </a>
-      </div>
-      <div>
-        <a href="https://behance.net" className='flex justify-between items-center w-full  px-0'>
+    
+        <a href="https://www.behance.net/hakuru" className='flex justify-between items-center w-full  px-0'>
            <FaBehance size={20} />
+        </a>
+        <a href="https://www.youtube.com/@hakuru" className='flex justify-between items-center w-full  px-0'>
+           <FaYoutube size={20} />
         </a>
       </div>
       
       {/* Desktop Menu - hidden on mobile, flex on medium screens and up */}
       <ul className='hidden md:flex gap-x-8'>
         <li>
-          <Link to='home' smooth duration={500}>
+          <NavLink to='home'>
             Home
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to='dev' smooth duration={500}>
+          <NavLink to='dev'>
             Dev
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to='art' smooth duration={500}>
+          <NavLink to='art'>
             Art
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to='contact' smooth duration={500}>
+          <NavLink to='contact'>
             Contact
-          </Link>
+          </NavLink>
         </li>
       </ul>
 
@@ -81,24 +86,24 @@ const Navbar = () => {
       {/* Mobile Menu - full screen overlay */}
       <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen  flex flex-col justify-center items-center'}>
         <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to='home' smooth duration={500}>
+          <NavLink onClick={handleClick} to='home'>
             Home
-          </Link>
+          </NavLink>
         </li>
         <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to='dev' smooth duration={500}>
+          <NavLink onClick={handleClick} to='dev'>
             Dev
-          </Link>
+          </NavLink>
         </li>
         <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to='art' smooth duration={500}>
+          <NavLink onClick={handleClick} to='art'>
             Art
-          </Link>
+          </NavLink>
         </li>
         <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to='contact' smooth duration={500}>
+          <NavLink onClick={handleClick} to='contact'>
             Contact
-          </Link>
+          </NavLink>
         </li>
       </ul>
 
