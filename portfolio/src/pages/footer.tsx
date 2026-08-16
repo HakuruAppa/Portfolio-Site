@@ -1,5 +1,5 @@
 import { useState } from "react";
-//import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './NavBar.css';
 
 import {
@@ -50,30 +50,34 @@ const Footer = () => {
     return (
         // Main footer container - fixed at bottom, full width
         
-            <div className='NavBar fixed bottom-0 w-full h-20 flex justify-between items-center px-4 '>
+            <div className='NavBar fixed bottom-0 w-full h-7 md:h-10 flex justify-between items-center px-4 '>
 
                 <div className=" hidden md:flex">
                     <p className='text-sm'>Anuk Ahangamgoda, 2026</p>
                 </div>
 
 
-                <div className='md:flex text-sm md:text-center'>
+                <div className='hidden md:flex text-sm md:text-center items-center'>
                         
-                        <a href='tel:+16474604939'  className='flex' style={{ fontWeight: 'bold' }}> <RiArrowRightUpLine size={12} /> +1 (647) 460-4939</a>
+                        <a href='tel:+16474604939'  className='flex' style={{ fontWeight: 'bold', fontSize: '12px' }}> <RiArrowRightUpLine size={12} /> +1 (647) 460-4939</a>
                         
                         <div className='flex md:mx-8'>
                         <p className='hidden md:flex'> | </p>
                         </div>
 
-                        <a href='mailto:anukahangamgoda@gmail.com'  className='flex' style={{ fontWeight: 'bold' }}> <RiArrowRightUpLine size={12} />anukahangamgoda@gmail.com</a>
+                        <a href='mailto:anukahangamgoda@gmail.com'  className='flex' style={{ fontWeight: 'bold', fontSize: '12px' }}> <RiArrowRightUpLine size={12} />anukahangamgoda@gmail.com</a>
                        
+                </div>
+
+                <div className='flex md:hidden text-sm md:text-center items-center'>
+                    <NavLink to="/contact" className='flex' style={{ fontWeight: 'bold', fontSize: '12px' }}> <RiArrowRightUpLine size={12} /> Contact</NavLink>
                 </div>
 
            
             {/* Theme Toggle */}
 
-            <div onClick={handleThemeToggle} className='cursor-pointer px-4'>
-                {theme === 'light' ? <FaMoon size={20} /> : <FaSun size={20} />}
+            <div onClick={handleThemeToggle} className='cursor-pointer'>
+                {theme === 'light' ? <FaMoon className='size-4 md:size-4' /> : <FaSun className='size-4 md:size-4' />}
             </div>
 
 

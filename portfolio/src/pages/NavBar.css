@@ -1,4 +1,9 @@
 .NavBar {
+    
+    background: var(--bg);
+    transition: background-color 1s ease;
+    
+    
     a {
         text-decoration: none;
         color: var(--text);

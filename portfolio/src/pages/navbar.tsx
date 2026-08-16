@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     // Main navbar container - fixed at top, full width
-    <div className='NavBar fixed w-full h-20 flex justify-between items-center px-4 '>
+    <div className='NavBar sticky top-0 w-full h-12 flex justify-between items-center px-4 drop-shadow-md'>
 
       <div>
         <h1 className='font-thin text-8xl'>Anuk A.</h1>
