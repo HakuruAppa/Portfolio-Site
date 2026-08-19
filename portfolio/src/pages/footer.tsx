@@ -50,7 +50,7 @@ const Footer = () => {
     return (
         // Main footer container - fixed at bottom, full width
         
-            <div className='NavBar fixed bottom-0 w-full h-7 md:h-10 flex justify-between items-center px-4 '>
+            <div className='NavBar fixed bottom-0 w-9/10 h-7 md:h-10 flex justify-between items-center px-4 my-2 place-self-center rounded-xl'>
 
                 <div className=" hidden md:flex">
                     <p className='text-sm'>Anuk Ahangamgoda, 2026</p>
@@ -76,7 +76,7 @@ const Footer = () => {
            
             {/* Theme Toggle */}
 
-            <div onClick={handleThemeToggle} className='cursor-pointer'>
+            <div onClick={handleThemeToggle} className='cursor-pointer pb-1'>
                 {theme === 'light' ? <FaMoon className='size-4 md:size-4' /> : <FaSun className='size-4 md:size-4' />}
             </div>
 

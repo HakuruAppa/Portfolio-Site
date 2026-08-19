@@ -2,6 +2,7 @@ import { useState } from "react";
 import {NavLink} from "react-router-dom";
 import './NavBar.css';
 
+
 import {
   FaBars,
   FaTimes,
@@ -24,11 +25,11 @@ const Navbar = () => {
 
   return (
     // Main navbar container - fixed at top, full width
-    <div className='NavBar sticky top-0 w-full h-12 flex justify-between items-center px-4 drop-shadow-md'>
+    <div className='NavBar sticky top-0 w-full h-12 flex justify-between items-center px-4'>
 
-      <div>
-        <h1 className='font-thin text-8xl'>Anuk A.</h1>
-      </div>
+      <NavLink className="cursor-pointer logo-container" to='home'>
+        <img className="logo scale-150 invert-(--invert)" src='src/assets/hakuru.png'></img>
+      </NavLink>
       
       <div className='flex justify-between items-center gap-x-12'>
       <div className='flex gap-x-4 items-center'>
@@ -75,7 +76,7 @@ const Navbar = () => {
       </ul>
 
       {/* Hamburger Icon - visible only on mobile */}
-      <div onClick={handleClick} className='md:hidden z-10 cursor-pointer'>
+      <div id='mobile-menu-icon' onClick={handleClick} className='md:hidden z-10 cursor-pointer'>
         {!nav ? <FaBars size={20} /> : <FaTimes size={20} />}
       </div>
        </div>
